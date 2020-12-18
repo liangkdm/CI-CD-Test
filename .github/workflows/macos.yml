@@ -10,7 +10,7 @@ on:
       - 'LICENSE'
 jobs:
   build:
-    name: Build
+    name: Build 
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
