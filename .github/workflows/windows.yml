@@ -47,7 +47,7 @@ jobs:
             msvc_arch: x64
             qt_arch_install: msvc2019_64          
     env:
-      targetName: TaoQuickShow.exe
+      targetName: HelloActions-Qt.exe
       VCINSTALLDIR: 'C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC'
     # 步骤
     steps:
