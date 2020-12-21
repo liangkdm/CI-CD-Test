@@ -36,8 +36,12 @@ jobs:
       - name: package
         #if: startsWith(github.event.ref, 'refs/tags/')
         run: |
+          
+          echo ./bin/${targetName}.app
           # 拷贝依赖
-          macdeployqt bin/${targetName}.app -qmldir=. -verbose=1 -dmg
+          macdeployqt ./bin/${targetName}.app -qmldir=. -verbose=1 -dmg
+          
+          
       # 上传artifacts          
       - uses: actions/upload-artifact@v2
         with:
