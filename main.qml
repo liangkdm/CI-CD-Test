@@ -6,7 +6,7 @@ Window {
     visible: true
     width: 640
     height: 480
-    title: qsTr("action test")
+    title: qsTr("Git CI/CD Test")
     Text {
         text: "Hello " + Qt.platform.os
         anchors.centerIn: parent
