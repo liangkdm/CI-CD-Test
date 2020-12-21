@@ -36,8 +36,6 @@ jobs:
       - name: package
         #if: startsWith(github.event.ref, 'refs/tags/')
         run: |
-          
-          echo ./bin/${targetName}.app
           # 拷贝依赖
           macdeployqt ./bin/${targetName}.app -qmldir=. -verbose=1 -dmg
           
@@ -49,7 +47,7 @@ jobs:
           path: ./bin/${targetName}.app
       # tag 上传Release
       - name: uploadRelease
-        if: startsWith(github.event.ref, 'refs/tags/')
+        #if: startsWith(github.event.ref, 'refs/tags/')
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{secrets.GITHUB_TOKEN}}
