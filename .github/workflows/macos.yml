@@ -34,7 +34,7 @@ jobs:
           make
       # tag 打包
       - name: package
-        if: startsWith(github.event.ref, 'refs/tags/')
+        #if: startsWith(github.event.ref, 'refs/tags/')
         run: |
           # 拷贝依赖
           macdeployqt bin/${targetName}.app -qmldir=. -verbose=1 -dmg
